@@ -1,0 +1,301 @@
+@font-face {
+    font-family: 'VCR OSD MONO';
+    src: url('assets/fonts/VCR_OSD_MONO.ttf');
+}
+@font-face {
+    font-family: 'BestTen-CRT';
+    src: url('assets/fonts/BestTen-CRT.ttf')
+}
+
+body {
+    background: url("assets/background.png") repeat;
+    font-family: 'VCR OSD MONO', 'BestTen-CRT', sans-serif;
+    color: white;
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+}
+
+main {
+    background-color: black;
+    padding: 32px;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #111;
+    padding: 16px;
+    font-size: 23px;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+header li {
+    list-style-type: none;
+    padding: 0 0.25em;
+    height: 32px;
+    margin: 0;
+}
+
+header li::marker {
+    content: '';
+}
+
+
+
+a {
+    color: white;
+    text-decoration: underline dotted;
+}
+
+a:hover {
+    text-decoration: underline solid;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0.5em 0;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin: 0.5em 0;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+li {
+    margin: 0.5em 0;
+}
+
+li::marker {
+    content: '🟆 ';
+}
+
+
+
+.container {
+    border: 13px solid transparent;
+    border-image: url('assets/gui/border.svg') 13 round;
+    padding: 7px 2px;
+    background-color: black;
+    font-size: 23px; /* font is natively 21px but is 23px in game */
+}
+
+/* i have no idea how to make this size relatively, rip mobile users */
+.container.chatbox {
+    max-width: 816px;
+    min-height: 180px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+
+.choice {
+    margin: 1px 22px;
+    list-style: none;
+    padding-left: 0;
+}
+
+.choice li {
+    margin: 0px 0px -2px 0px;
+    padding: 0px 2px 4px 2px; /* ideally -1px 0px 5px 0px but not possible. text should be 1px higher than it is */
+    border: 3px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.choice li::marker {
+    content: '';
+}
+
+.choice li a {
+    display: inline-block;
+    width: 100%;
+}
+
+.choice li:hover {
+    border-image: url("assets/gui/border-choice.svg") 3 stretch;
+}
+
+
+
+
+@keyframes move-top-left {
+    0% {
+        top: -12px;
+        left: -12px;
+    }
+    100% {
+        top: -23px;
+        left: -23px;
+    }
+}
+@keyframes move-top-right {
+    0% {
+        top: -12px;
+        right: -12px;
+    }
+    100% {
+        top: -23px;
+        right: -23px;
+    }
+}
+@keyframes move-bottom-left {
+    0% {
+        bottom: -12px;
+        left: -12px;
+    }
+    100% {
+        bottom: -23px;
+        left: -23px;
+    }
+}
+@keyframes move-bottom-right {
+    0% {
+        bottom: -12px;
+        right: -12px;
+    }
+    100% {
+        bottom: -23px;
+        right: -23px;
+    }
+}
+
+#corner-top-left,
+#corner-top-right,
+#corner-bottom-left,
+#corner-bottom-right {
+    display: none;
+    user-select: none;
+}
+
+.choice li:active #corner-top-left,
+.choice li:hover #corner-top-left,
+.choice li:focus #corner-top-left {
+    animation: move-top-left 0.5s infinite linear alternate;
+    top: -12px;
+    left: -12px;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+.choice li:active #corner-top-right,
+.choice li:hover #corner-top-right,
+.choice li:focus #corner-top-right {
+    animation: move-top-right 0.5s infinite linear alternate;
+    top: -12px;
+    right: -12px;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+.choice li:active #corner-bottom-left,
+.choice li:hover #corner-bottom-left,
+.choice li:focus #corner-bottom-left {
+    animation: move-bottom-left 0.5s infinite linear alternate;
+    bottom: -12px;
+    left: -12px;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+.choice li:active #corner-bottom-right,
+.choice li:hover #corner-bottom-right,
+.choice li:focus #corner-bottom-right {
+    animation: move-bottom-right 0.5s infinite linear alternate;
+    bottom: -12px;
+    right: -12px;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+@keyframes move-scroll-arrow-down {
+    0% {
+        bottom: -2px
+    }
+    100% {
+        bottom: -5px;
+    }
+}
+
+@keyframes move-click-to-continue-arrow {
+    0% {
+        right: 13px;
+        /* background-color: red; */
+    }
+    25% {
+        right: 12px;
+        /* background-color: green; */
+    }
+    50% {
+        right: 10px;
+        /* background-color: blue; */
+    }
+    75% {
+        right: 11px;
+        /* background-color: purple; */
+    }
+    100% {
+        right: 13px;
+        /* background-color: red; */
+    }
+}
+
+.scroll-arrow-down {
+    position: absolute;
+    transform: rotate(90deg) scale(2);
+    left: 51%; /* 402px */
+    animation: move-scroll-arrow-down 0.5s infinite steps(2, jump-none) alternate;
+    image-rendering: pixelated;
+}
+
+.click-to-continue-arrow {
+    position: absolute;
+    transform: scale(2);
+    animation: move-click-to-continue-arrow 1s infinite steps(2, jump-none) normal;
+    image-rendering: pixelated;
+    right: 10px;
+    bottom: 9px;
+}
+
+
+
+.big {
+    font-size: larger;
+}
+
+.small {
+    font-size: smaller;
+}
+
+.secondary {
+    color: #fffb
+}
+
+.column-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column {
+    flex: 1 1 auto;
+}
