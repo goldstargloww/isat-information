@@ -13,7 +13,615 @@
     <body>
         <head-er></head-er>
         <main>
-            wip page there is literally nothing here
+            <h1 class="title">ISAT VARIABLES</h1>
+
+            <h1 id="0001">0001. Loop #</h1>
+                <p>
+                    number of loops, not including fake loops. starts at 0, incremented by 1 at the start of each loop.
+                </p>
+            
+            <h1 id="0002">0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</h1>
+                <p>
+                    act number.
+                </p>
+                <table>
+                    <tr>
+                        <th>value</th>
+                        <th>start trigger (simple)</th>
+                        <th>start trigger (technical)</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            start of game
+                        </td>
+                        <td>
+                            <b>common event 0009. StartingGameSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            first death
+                        </td>
+                        <td>
+                            <b>map 086:DeathCorridor</b> &gt; <b>event 016:Death</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            first time beating the king
+                        </td>
+                        <td>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4, if <a href="#0106">variable 0106. HHM Reset #</a> = 1 and <a href="#0343">variable 0343. FinishedAct2_AL</a> = 0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            kingquest complete + at least one friendquest run complete, at the start of a loop.
+                        </td>
+                        <td>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4.<br>
+                            if <b>switch 210. !!FriendquestDone_AL</b> is OFF, and <a href="#0034">variable 0034. !!!FriendQuestsAL</a> = 7, and <b>switch 214. !!!KingquestDone_AL</b> is ON. <i>or</i> if <a href="#0024">variable 0024. !!!Kingquest</a> = 12, and <b>switch 210. !!!FriendquestDone_AL</b> is ON.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            talk to euphrasie about wish craft
+                        </td>
+                        <td>
+                            <b><a href="#0027">variable 0027. !!!LoopQuest</a> = 14</b> at loop's start
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            after VSFriends
+                        </td>
+                        <td>
+                            <b>map 053:EPILOGUE</b> &gt; <b>event 006:Event</b>
+                        </td>
+                    </tr>
+                </table>
+
+            <h1 id="0003">0003. Random #</h1>
+                <p>
+                    random number. rerolled whenever needed.
+                </p>
+            
+            <h1 id="0004">0004. Enemy Troop ID</h1>
+                <p>
+                    refers to the enemy you're currently fighting. might also refer to the last enemy you thought.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            enemy
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            TRISTESSE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            DÉPIT, CHAGRIN, PEINE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            ANGOISSE, DEUIL
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            MISÈRE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            THE KING
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            RANCOEUR, AMERTUME
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            ANXIÉTÉ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            9
+                        </td>
+                        <td>
+                            TOURMENT x3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            DÉSESPOIR
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            NOSTALGIE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            CALAMITÉ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            ACCABLEMENT, ABATTEMENT
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            BOURDON, SCISSORS HAND x2, PAPER HAND x2, ROCK HAND x2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            15
+                        </td>
+                        <td>
+                            DÉTRESSE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            666
+                        </td>
+                        <td>
+                            MAL DU PAYS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            121212
+                        </td>
+                        <td>
+                            FRIENDS
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            363636
+                        </td>
+                        <td>
+                            LOOP
+                        </td>
+                    </tr>
+                </table>
+
+            <h1 id="0005">0005. Item ID</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+            
+            <h1 id="0006">0006. Current Position X</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+            
+            <h1 id="0007">0007. Current Position Y</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+            
+            <h1 id="0008">0008. Teleport Unlocked #</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+            
+            <h1 id="0009">0009. LOOP&lt;&lt;fakeloop# CanBeSeen&gt;&gt;</h1>
+                <p>
+                    number of fake loops, added onto the number of real loops. this is the number shown to the player, whenever the number of loops are mentioned. (eg. "Loop X" when a new loop starts, in the save menu...)
+                </p>
+                <p>
+                    for every loop, at least 1 is added to this variable, making it equal to or greater than the number of real loops (<a href="#0001">variable 0001. Loop #</a>). the amount added is determined by <a href="#0377">variable #0377. FakeLoopAdded</a>.
+                </p>
+                <pre><code>at the start of a new loop:
+    if (switch SpecialMilestone is ON) or (memory of self is equipped) or (act == 1) or (act == 2):
+        this variable += 1
+    else if (act == 3):
+        this variable += random number between 1 and 3 (inclusive)
+    else if (act == 4):
+        this variable += random number between 1 and 5 (inclusive)</code></pre>
+
+            <h1 id="0010">0010. Self Var EventCheck_0</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0011">0011. SiffrinDialogue</h1>
+                <p>
+                    determines siffrin's internal dialogue when there is some alongside their external dialogue. checks the language and sets the value accordingly.
+                </p>
+
+            <h1 id="0012">0012. EnemyMap#</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0013">0013. LastUsedItem/Skill</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0014">0014. SpecialEvent #_TL</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0015">0015. SPACE BEFORE CHOICE</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            game language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            <span style="white-space: pre; background-color: #111;">                </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            <span style="white-space: pre; background-color: #111;"> </span>
+                        </td>
+                    </tr>
+                </table>
+
+            <h1 id="0016">0016. Self Var EventCheck_1</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0017">0017. Self Var EventCheck_2</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0018">0018. Self Var EventCheck_3</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0019">0019. Self Var EventCheck_4</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0020">0020. Self Var EventCheck_5</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0021">0021. [--STORY SPECIFIC--]</h1>
+                <p>
+                    this is just a header
+                </p>
+            
+            <h2 id="0022">0022. TalkToEveryoneVillageTL</h2>
+                <p>
+                    <i>probably</i> the amount of your party you've talked to this loop in dormont but i haven't checked
+                </p>
+
+            <h2 id="0023">0023. TreeWish</h2>
+                <p>
+                    the wish you chose at the start of the game. only ever used to determine some future dialogue, or to check if you've wished at all.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            meaning
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            none
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            mirabelle's wish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            isabeau's wish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            odile's wish
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            bonnie's wish
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0024">0024. !!!Kingquest</h2>
+                <p>
+                    where you are in regards to kingquest.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            trigger (simple)
+                        </th>
+                        <th>
+                            trigger (technical)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            start of the game
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            talk to Loop for the first time in ACT 3
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            in order: "What's your goal?" + "Are you the one doing this to me?" + "How are you freezing people in time?"
+                        </td>
+                        <td>
+                            <b>common event 0050. SKILL_Ask King</b> &gt; "How are you freezing people in time?", if <a href="#0389">variable 0389. IntroQuestionsToKing</a> = 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            read the Craftonomy book about Time Craft
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            "So, you're using Time Craft?"
+                        </td>
+                        <td>
+                            <b>common event 0050. SKILL_Ask King</b> &gt; "So, you're using Time Craft?", if <a href="#0024">variable 0024. !!!Kingquest</a> = 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            look at the newspaper
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            look out the window in the observatory
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            "What should I remember?"
+                        </td>
+                        <td>
+                            <b>common event 0050. SKILL_Ask King</b> &gt; "What should I remember?", if <a href="#0024">variable 0024. !!!Kingquest</a> = 6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            look at the diary in the library
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            9
+                        </td>
+                        <td>
+                            get the mirror picture again
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            "Where are you from?"
+                        </td>
+                        <td>
+                            <b>common event 0238. KingCountry</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            start of next loop after that
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            "Let's stop fighting."
+                        </td>
+                        <td>
+                            <b>map 024:King Room</b> &gt; <b>event 001:TheKing</b> &gt; tab 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            start of next loop after that
+                        </td>
+                        <td>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            talk to Loop about Wish Craft
+                        </td>
+                        <td>
+                            <i class="secondary">tba</i>
+                        </td>
+                    </tr>
+                </table>
+
+
+
+
         </main>
     </body>
     

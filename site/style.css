@@ -4,7 +4,11 @@
 }
 @font-face {
     font-family: 'BestTen-CRT';
-    src: url('assets/fonts/BestTen-CRT.ttf')
+    src: url('assets/fonts/BestTen-CRT.ttf');
+}
+@font-face {
+    font-family: 'Fairfax Hax';
+    src: url('assets/fonts/FairfaxHax.ttf');
 }
 
 body {
@@ -58,6 +62,12 @@ a:hover {
     text-decoration: underline solid;
 }
 
+h1.title {
+    font-size: 3em;
+    margin: 0.5em 0;
+    text-align: center;
+}
+
 h1 {
     font-size: 2.5em;
     margin: 0.5em 0;
@@ -72,16 +82,28 @@ h3 {
     font-size: 1.5em;
 }
 
-.center {
-    text-align: center;
-}
-
 li {
     margin: 0.5em 0;
 }
 
 li::marker {
     content: '🟆 ';
+}
+
+table {
+    border: 1px white solid;
+    padding: 2px;
+    margin: auto;
+}
+th, td {
+    border: 1px gray solid;
+    padding: 0.5em 1em;
+}
+
+pre {
+    background-color: #080808;
+    padding: 0.5em;
+    font-family: 'Fairfax Hax', monospace;
 }
 
 
@@ -288,6 +310,10 @@ li::marker {
 
 .secondary {
     color: #fffb
+}
+
+.center {
+    text-align: center;
 }
 
 .column-container {
