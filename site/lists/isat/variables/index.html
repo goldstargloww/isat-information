@@ -46,7 +46,7 @@
                             2
                         </td>
                         <td>
-                            first death
+                            looping back after your first death in Death Corridor
                         </td>
                         <td>
                             <b>map 086:DeathCorridor</b> &gt; <b>event 016:Death</b>
@@ -57,10 +57,10 @@
                             3
                         </td>
                         <td>
-                            first time beating the king
+                            looping back after beating the King for the first time
                         </td>
                         <td>
-                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4, if <a href="#0106">variable 0106. HHM Reset #</a> = 1 and <a href="#0343">variable 0343. FinishedAct2_AL</a> = 0
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4 (runs if <b>switch 0107. SpecialMilestone</b> is ON, and <b>switch 0143. EventSwitchAutorun2</b> is ON, and <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 3), if <a href="#0106">variable 0106. HHM Reset #</a> = 1 and <a href="#0343">variable 0343. FinishedAct2_AL</a> = 0
                         </td>
                     </tr>
                     <tr>
@@ -68,10 +68,10 @@
                             4
                         </td>
                         <td>
-                            kingquest complete + at least one friendquest run complete, at the start of a loop.
+                            kingquest complete + at least one friendquest run complete, at the start of a loop
                         </td>
                         <td>
-                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4.<br>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4 (runs if <b>switch 0107. SpecialMilestone</b> is ON, and <b>switch 0143. EventSwitchAutorun2</b> is ON, and <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 3).<br>
                             if <b>switch 210. !!FriendquestDone_AL</b> is OFF, and <a href="#0034">variable 0034. !!!FriendQuestsAL</a> = 7, and <b>switch 214. !!!KingquestDone_AL</b> is ON. <i>or</i> if <a href="#0024">variable 0024. !!!Kingquest</a> = 12, and <b>switch 210. !!!FriendquestDone_AL</b> is ON.
                         </td>
                     </tr>
@@ -80,10 +80,10 @@
                             5
                         </td>
                         <td>
-                            talk to euphrasie about wish craft
+                            looping back after talking to Euphrasie about Wish Craft
                         </td>
                         <td>
-                            <b><a href="#0027">variable 0027. !!!LoopQuest</a> = 14</b> at loop's start
+                            <b>common event 0001. NEWLOOP</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 14
                         </td>
                     </tr>
                     <tr>
@@ -460,7 +460,7 @@
                             start of the game
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -471,7 +471,7 @@
                             talk to Loop for the first time in ACT 3
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 007:Tree+LoopCutscene</b> &gt; tab 6 (runs if <b>switch 0143. EventSwitchAutorun2</b> is ON)
                         </td>
                     </tr>
                     <tr>
@@ -493,7 +493,7 @@
                             read the Craftonomy book about Time Craft
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -515,7 +515,7 @@
                             look at the newspaper
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -526,7 +526,7 @@
                             look out the window in the observatory
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -548,7 +548,7 @@
                             look at the diary in the library
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -559,7 +559,7 @@
                             get the mirror picture again
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -581,7 +581,7 @@
                             start of next loop after that
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                     <tr>
@@ -592,7 +592,7 @@
                             "Let's stop fighting."
                         </td>
                         <td>
-                            <b>map 024:King Room</b> &gt; <b>event 001:TheKing</b> &gt; tab 3
+                            <b>map 024:King Room</b> &gt; <b>event 001:TheKing</b> &gt; tab 3 (runs if <b>switch 0143. EventSwitchAutorun2</b> is ON)
                         </td>
                     </tr>
                     <tr>
@@ -603,7 +603,7 @@
                             start of next loop after that
                         </td>
                         <td>
-                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4 (runs if <b>switch 0107. SpecialMilestone</b> is ON, and <b>switch 0143. EventSwitchAutorun2</b> is ON, and <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 3)
                         </td>
                     </tr>
                     <tr>
@@ -614,13 +614,310 @@
                             talk to Loop about Wish Craft
                         </td>
                         <td>
-                            <i class="secondary">tba</i>
+                            <i class="secondary">TBA</i>
                         </td>
                     </tr>
                 </table>
 
+            <h2 id="0025">0025. TalkToEveryoneFinalRoomTL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
 
+            <h2 id="0026">0026. SawSafeRoomEvent_TL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
 
+            <h2 id="0027">0027. !!!LoopQuest</h2>
+                <p>
+                    where you are in regards to loopquest.
+                </p>
+                <p>
+                    * these three can happen in any order
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            trigger (simple)
+                        </th>
+                        <th>
+                            trigger (technical)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            start of the game
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            talk to Loop for the first time in ACT 3
+                        </td>
+                        <td>
+                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 007:Tree+LoopCutscene</b> &gt; tab 6 (runs if <b>switch 0143. EventSwitchAutorun2</b> is ON)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2*
+                        </td>
+                        <td>
+                            ask the King "What's your goal?" + "Are you the one doing this to me?" + "How are you freezing people in time?"
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3*
+                        </td>
+                        <td>
+                            read the Craftonomy book about Time Craft 
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4*
+                        </td>
+                        <td>
+                            talk to Euphrasie for the first time after starting loopquest
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            read the Craftonomy book after talking to Euphrasie, then loop back after talking to Euphrasie
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            Loop asks to hang out
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            hang out with Loop
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            8
+                        </td>
+                        <td>
+                            read the journal with a star on the cover (king room)
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            9
+                        </td>
+                        <td>
+                            talk to Loop after reading that book
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            10
+                        </td>
+                        <td>
+                            read the storage room book
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            11
+                        </td>
+                        <td>
+                            read the book in the secret library
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            12
+                        </td>
+                        <td>
+                            look at wish spreadsheet after asking about Dormont's wishes
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            13
+                        </td>
+                        <td>
+                            talk to Loop
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            14
+                        </td>
+                        <td>
+                            talk to Euphrasie about Wish Craft
+                        </td>
+                        <td>
+                            <b>map 020:LastRoom</b> &gt; <b>event 001:HeadHousemaiden</b> &gt; tab 6 (runs if <b>switch 0143. EventSwitchAutorun2</b> is ON)
+                        </td>
+                    </tr>
+                </table>
+
+            <h6 id="0028">0028.</h6>
+
+            <h1 id="0029">0029. CanFindSkillNow</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0030">0030. !!!ACT5_UntrustEnds</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0031">0031. MandatoryMonstersBeaten#_TL</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0032">0032. SavePointAppears_AL</h1>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0033">0033. [--FRIENDQUEST--]</h1>
+                <p>
+                    heading
+                </p>
+
+            <h2 id="0034">0034. !!!FriendsQuestAL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0035">0035. Miraquest_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0036">0036. Odilequest_TL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0037">0037. Bonniequest_TL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0038">0038. Bonniefoods_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0039">0039. BonnieListening_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0040">0040. Isaquest_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0041">0041. [--VILLAGE--]</h1>
+                <p>
+                    header
+                </p>
+
+            <h2 id="0042">0042. It'sARibbon!_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0043">0043. isa!!!!!_TL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0044">0044. QQQ_IsaWon'tTouchYou_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0045">0045. LoopQuestionsIntro_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0046">0046. NameboxName</h2>
+                <p>
+                    name in the namebox during dialogue. set as needed.
+                </p>
+
+            <h2 id="0047">0047. QQQ_ChateauCastle_AL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0048">0048. ChangeGodBlessing_TL</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h6 id="0049">0049.</h6>
 
         </main>
     </body>
