@@ -321,6 +321,11 @@ pre {
     text-align: center;
 }
 
+img.center {
+    display: block;
+    margin: auto;
+}
+
 .column-container {
     width: 100%;
     display: flex;
@@ -329,4 +334,42 @@ pre {
 
 .column {
     flex: 1 1 auto;
+}
+
+
+#map-isat-2 {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    background-image: url("https://instarsandtime.wiki.gg/images/a/ae/Map_Dormont_MEADOW.png");
+    background-repeat: no-repeat;
+    width: 816px;
+    height: 864px;
+    gap: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+#map-isat-2 > div {
+    background-color: #00000080;
+}
+#map-isat-2-event-1 {
+    grid-area: 1 / 1 / 1 / 1;
+}
+#map-isat-2-event-7 {
+    grid-area: 17 / 17 / 17 / 17;
+}
+#map-isat-2-event-9 {
+    grid-area: 4 / 6 / 4 / 6;
+}
+#map-isat-2-event-11 {
+    grid-area: 10 / 9 / 10 / 9;
+}
+#map-isat-2-event-12 {
+    grid-area: 17 / 1 / 17 / 1;
+}
+#map-isat-2-event-13 {
+    grid-area: 11 / 9 / 11 / 9;
+}
+#map-isat-2-event-14 {
+    grid-area: 5 / 4 / 5 / 4;
 }
