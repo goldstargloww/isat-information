@@ -493,7 +493,7 @@
                             read the Craftonomy book about Time Craft
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 079:CandleDorm (Timecraft)</b> &gt; <b>event 004:craftology</b>, "Does that craftonomy book have anything on Time Craft?", if <a href="#0024">variable 0024. !!!Kingquest</a> = 2
                         </td>
                     </tr>
                     <tr>
@@ -515,7 +515,7 @@
                             look at the newspaper
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 080:WritingDorm (Key 1-2F)</b> &gt; <b>event 010:newspaper</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> = 4
                         </td>
                     </tr>
                     <tr>
@@ -526,7 +526,7 @@
                             look out the window in the observatory
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 026:StarRoom</b> &gt; <b>event 007:Window</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> = 5
                         </td>
                     </tr>
                     <tr>
@@ -548,7 +548,7 @@
                             look at the diary in the library
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 084:Library (Key 2-2)</b> &gt; <b>event 006:Journal</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> = 7
                         </td>
                     </tr>
                     <tr>
@@ -559,7 +559,7 @@
                             get the mirror picture again
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 099:MirrorRoom (Key 3-1)</b> &gt; <b>event 003:Mirror</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> = 8
                         </td>
                     </tr>
                     <tr>
@@ -581,7 +581,7 @@
                             start of next loop after that
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4 (runs if <b>switch 0107. SpecialMilestone</b> is ON, and <b>switch 0143. EventSwitchAutorun2</b> is ON, and <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 3), if <a href="#0024">variable 0024. !!!Kingquest</a> = 10
                         </td>
                     </tr>
                     <tr>
@@ -614,7 +614,7 @@
                             talk to Loop about Wish Craft
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0162. PreDialogue</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> = 13
                         </td>
                     </tr>
                 </table>
@@ -634,7 +634,7 @@
                     where you are in regards to loopquest.
                 </p>
                 <p>
-                    * these three can happen in any order
+                    * these three can happen in any order. each of these numbers aren't tied to their specific events as they are in the table - instead, each of these events cause the variable to increment by 1.
                 </p>
                 <table>
                     <tr>
@@ -672,35 +672,35 @@
                     </tr>
                     <tr>
                         <td>
-                            2*
+                            <span title="can happen in any order">2*</span>
                         </td>
                         <td>
                             ask the King "What's your goal?" + "Are you the one doing this to me?" + "How are you freezing people in time?"
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0050. SKILL_Ask King</b> &gt; "How are you freezing people in time?", if <a href="#0389">variable 0389. IntroQuestionsToKing</a> = 3
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            3*
+                            <span title="can happen in any order">3*</span>
                         </td>
                         <td>
                             read the Craftonomy book about Time Craft 
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 079:CandleDorm (Timecraft)</b> &gt; <b>event 004:craftology</b>, "Does that craftonomy book have anything on Time Craft?", if <a href="#0024">variable 0024. !!!Kingquest</a> = 2
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            4*
+                            <span title="can happen in any order">4*</span>
                         </td>
                         <td>
                             talk to Euphrasie for the first time after starting loopquest
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 002:MEADOW</b> &gt; <b>event 007:MeadowEvents</b> &gt; tab 4 (runs if <b>switch 0107. SpecialMilestone</b> is ON, and <b>switch 0143. EventSwitchAutorun2</b> is ON, and <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 3), if <a href="#0382">variable 0382. LoopquesttalktoHHM_AL</a> = 1
                         </td>
                     </tr>
                     <tr>
@@ -711,7 +711,7 @@
                             read the Craftonomy book after talking to Euphrasie, then loop back after talking to Euphrasie
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0162. PreDialogue</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 4 and <a href="#0382">variable 0382. LoopquesttalktoHHM_AL</a> = 1
                         </td>
                     </tr>
                     <tr>
@@ -722,7 +722,7 @@
                             Loop asks to hang out
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0162. PreDialogue</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 5
                         </td>
                     </tr>
                     <tr>
@@ -733,7 +733,7 @@
                             hang out with Loop
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 127:LoopQuest</b> &gt; <b>event 001:Quest</b>
                         </td>
                     </tr>
                     <tr>
@@ -744,7 +744,7 @@
                             read the journal with a star on the cover (king room)
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 018:KingRoom</b> &gt; <b>event 009:journal</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> ≥ 7 and <a href="#0016">variable 0016. Self Var_EventCheck_1</a> = 1
                         </td>
                     </tr>
                     <tr>
@@ -755,7 +755,7 @@
                             talk to Loop after reading that book
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0162. PreDialogue</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 8
                         </td>
                     </tr>
                     <tr>
@@ -766,7 +766,7 @@
                             read the storage room book
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 112:Storage Room (Locked)</b> &gt; <b>010:bookcase</b>, if Siffrin has <b>Memory of Memories</b> equipped, if <a href="#0027">variable 0027. !!!LoopQuest</a> < 9, and if <a href="#0016">variable 0016. Self Var_EventCheck_1</a> = 1
                         </td>
                     </tr>
                     <tr>
@@ -777,7 +777,7 @@
                             read the book in the secret library
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>map 085:SecretLibrary</b> &gt; <b>004:Books</b>, if Siffrin has <b>Memory of Memories</b> equipped, if <a href="#0027">variable 0027. !!!LoopQuest</a> ≥ 10, and if <a href="#0016">variable 0016. Self Var_EventCheck_1</a> = 1
                         </td>
                     </tr>
                     <tr>
@@ -785,10 +785,10 @@
                             12
                         </td>
                         <td>
-                            look at wish spreadsheet after asking about Dormont's wishes
+                            look at wish spreadsheets
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                           <b>map 082:Admin (Key 2-1L)</b> &gt; <b>event 010:Paper</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 11
                         </td>
                     </tr>
                     <tr>
@@ -799,7 +799,7 @@
                             talk to Loop
                         </td>
                         <td>
-                            <i class="secondary">TBA</i>
+                            <b>common event 0162. PreDialogue</b>, if <a href="#0027">variable 0027. !!!LoopQuest</a> = 12
                         </td>
                     </tr>
                     <tr>
