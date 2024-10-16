@@ -345,12 +345,17 @@ img.center {
     background-repeat: no-repeat;
     width: 816px;
     height: 864px;
-    gap: 2px;
-    padding: 2px;
     box-sizing: border-box;
 }
 #map-isat-2 > div {
     background-color: #00000080;
+    margin: 4px;
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+#map-isat-2 > div:hover {
+    margin: 2px;
+    border: 2px solid white;
 }
 #map-isat-2-event-1 {
     grid-area: 1 / 1 / 1 / 1;
