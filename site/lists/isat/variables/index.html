@@ -1304,6 +1304,294 @@
                     number of times talking to the head housemaiden during friendquest loops sent you back to the start.
                 </p>
 
+            <h6 id="0112">0112.</h6>
+
+            <h6 id="0113">0113.</h6>
+
+            <h6 id="0114">0114.</h6>
+
+            <h6 id="0115">0115.</h6>
+
+            <h6 id="0116">0116.</h6>
+
+            <h6 id="0117">0117.</h6>
+
+            <h6 id="0118">0118.</h6>
+
+            <h6 id="0119">0119.</h6>
+
+            <h6 id="0120">0120.</h6>
+
+            <h1 id="0121">0121. [--OPTIONS/TELEPORT--]</h1>
+
+            <h2 id="0122">0122. ArrowSelector</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0123">0123. ArrowSelector X</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0124">0124. ArrowSelector Y</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0125">0125. JustTeleported #</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0126">0126. CurrentPosition</h2>
+                <p>
+                    represents, roughly, your current position in the loop.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            location
+                        </th>
+                        <th>
+                            trigger (simple)
+                        </th>
+                        <th>
+                            trigger (technical)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            Dormont
+                        </td>
+                        <td>
+                            start the game, or start a new loop
+                        </td>
+                        <td>
+                            <b>common event 0009: StartingGameSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            floor 1
+                        </td>
+                        <td>
+                            reach floor 1
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            floor 2
+                        </td>
+                        <td>
+                            reach floor 2
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            floor 3
+                        </td>
+                        <td>
+                            reach floor 3
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            the King's floor
+                        </td>
+                        <td>
+                            reach the King's floor
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            the end rooms (and Dormont, in ACT 6)
+                        </td>
+                        <td>
+                            defeat the King
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0127">0127. TitleActPicture# (PERSISTENT)</h2>
+                <p>
+                    determines the images used for the title screen.
+                </p>
+                <p>
+                    hover over the text in the meaning column to see the corresponding image! (ACT 3 & 4 use the same image)
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            meaning
+                        </th>
+                        <th>
+                            trigger (simple)
+                        </th>
+                        <th>
+                            trigger (technical)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td class="relative">
+                            ACT 1
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/7/76/ISAT_Title_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start the game, or start a new loop during ACT 1
+                        </td>
+                        <td>
+                            <b>common event 0009. StartingGameSwitches</b>, or <b>common event 0102. LOOP_ResetSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td class="relative">
+                            ACT 2
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/3/3f/ISAT_Title_ACT2_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start a new loop during ACT 2
+                        </td>
+                        <td>
+                            same trigger as <a href="#0024">ACT 2</a>, or <b>common event 0102. LOOP_ResetSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td class="relative">
+                            ACT 3
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/f/f4/ISAT_Title_ACT3_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start a new loop during ACT 3
+                        </td>
+                        <td>
+                            <b>common event 0102. LOOP_ResetSwitches</b>, or same trigger as <a href="#0024">ACT 3</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td class="relative">
+                            ACT 4
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/f/f4/ISAT_Title_ACT3_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start a new loop during ACT 4
+                        </td>
+                        <td>
+                            <b>common event 0102. LOOP_ResetSwitches</b>, or same trigger as <a href="#0024">ACT 4</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td class="relative">
+                            ACT 5
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/e/e2/ISAT_Title_ACT5_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start ACT 5, or start a new loop during ACT 5
+                        </td>
+                        <td>
+                            same trigger as <a href="#0024">ACT 5</a>, or <b>common event 0102. LOOP_ResetSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td class="relative">
+                            ACT 6
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/9/97/ISAT_Title_ACT6_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            start a new loop during ACT 6
+                        </td>
+                        <td>
+                            same trigger as <a href="#0024">ACT 6</a>, or <b>common event 0102. LOOP_ResetSwitches</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td class="relative">
+                            endgame
+                            <span class="tooltip">
+                                <img src="https://instarsandtime.wiki.gg/images/b/bc/ISAT_Title_Endgame_Animation.gif" width="204px">
+                            </span>
+                        </td>
+                        <td>
+                            complete the game!
+                        </td>
+                        <td>
+                            <b>map 053:EPILOGUE</b> &gt; <b>event 001:HeadHousemaiden</b> &gt; tab 2 (runs if <a href="#0025">variable 0025. TalkToEveryoneFinalRoomTL</a> ≥ 13), (Ready.)
+                        </td>
+                    </tr>
+                </table>
+
         </main>
     </body>
     

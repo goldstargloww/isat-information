@@ -84,6 +84,7 @@ h3 {
 
 h6 {
     font-size: 0.75em;
+    margin: 0.5em 0;
     color: #fffb;
 }
 
@@ -329,4 +330,20 @@ pre {
 
 .column {
     flex: 1 1 auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    left: -50%;
+    bottom: 100%;
+}
+
+:hover > .tooltip {
+    visibility: visible;
 }
