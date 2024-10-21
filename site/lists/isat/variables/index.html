@@ -322,7 +322,7 @@
                 <table>
                     <tr>
                         <th>
-                            game language
+                            language
                         </th>
                         <th>
                             value
@@ -857,7 +857,7 @@
                             finish Mirabelle's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 021:Miraquest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 021:Miraquest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -868,7 +868,7 @@
                             finish Odile's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 025:OdileQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 025:OdileQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -879,7 +879,7 @@
                             finish Bonnie's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 061:BonnieQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 061:BonnieQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -890,7 +890,7 @@
                             talk to Isabeau by the Favor Tree in ACT 5
                         </td>
                         <td>
-                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b> &gt; tab 2 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b> &gt; tab 2 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                 </table>
@@ -982,7 +982,7 @@
                             look at the reminder note for the first time
                         </td>
                         <td>
-                            <b>common event 0055. ITEM_remindernote</b>, if <a href="0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt</a> < 4 and <a href="0042">variable 0042. It'sARibbon!_AL</a> ≤ 1
+                            <b>common event 0055. ITEM_remindernote</b>, if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt</a> < 4 and <a href="#0042">variable 0042. It'sARibbon!_AL</a> ≤ 1
                         </td>
                     </tr>
                     <tr>
@@ -993,7 +993,7 @@
                             ask Mirabelle about what the thing she drew on the note is
                         </td>
                         <td>
-                            <b>map 030:DORMONT</b> &gt; <b>event 003:Mirabelle</b>, "What's the thing you drew?" (available if <a href="0042">variable 0042. It'sARibbon!_AL</a> = 1)
+                            <b>map 030:DORMONT</b> &gt; <b>event 003:Mirabelle</b>, "What's the thing you drew?" (available if <a href="#0042">variable 0042. It'sARibbon!_AL</a> = 1)
                         </td>
                     </tr>
                 </table>
@@ -1003,7 +1003,7 @@
                     the number of times you've gone "Isaaaaaaa!!!!!!!" when talking to him by the Favor Tree in ACT 1 & 2 (except for loop 1).
                 </p>
                 <p>
-                    only ever equals 0, 1, or 2. able to be incremented in <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b>, if <a href="0024">variable 0024. !!!Kingquest</a> ≠ 13, and if <b>switch 0045. TalkedToIsa_TL</b> is OFF, by choosing "Isa!". from there, choosing "Isaaaaaaa!!!!!!!" will increment this variable by 1, with a maximum of 2.
+                    only ever equals 0, 1, or 2. able to be incremented in <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> ≠ 13, and if <b>switch 0045. TalkedToIsa_TL</b> is OFF, by choosing "Isa!". from there, choosing "Isaaaaaaa!!!!!!!" will increment this variable by 1, with a maximum of 2.
                 </p>
 
             <h2 id="0044">0044. QQQ_IsaWon'tTouchYou_AL</h2>
@@ -2252,6 +2252,1516 @@
                     <i class="secondary">TBA</i>
                 </p>
 
+            <h1 id="0281">0281. [--TEXT CHANGE--]</h1>
+
+            <h2 id="0282">0282. SilverCoin</h2>
+                <p>
+                    changes the text for the <b>Silver Coin</b> in the menu. all changes occur in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            act
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1-2
+                        </td>
+                        <td>
+                            Some change you got from buying a croissant.
+                        </td>
+                        <td>
+                            クロワッサンを買ったときにもらったおつり。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3-4
+                        </td>
+                        <td>
+                            A nice silver coin that has followed you even through time.
+                        </td>
+                        <td>
+                            時間を超えてついてきたきれいな銀貨。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            A coin.
+                        </td>
+                        <td>
+                            銀貨。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            Your coin. There’s only one like it in the Universe.
+                        </td>
+                        <td>
+                            僕の銀貨。宇宙にただ一つの銀貨だ。
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0283">0283. friend/ally</h2>
+                <p>
+                    changes how the party is addressed in sentences. updated in <b>common event 0054. !!!TEXT VARIABLES</b>. first checks if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> = 5, and if it isn't, checks the value of <a href="#0357">variable 0357. friend ally family</a>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            condition
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0002">ACT</a> = 5
+                        </td>
+                        <td>
+                            actor
+                        </td>
+                        <td>
+                            演者
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 0
+                        </td>
+                        <td>
+                            friend
+                        </td>
+                        <td>
+                            友達
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 1
+                        </td>
+                        <td>
+                            ally
+                        </td>
+                        <td>
+                            仲間
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 2
+                        </td>
+                        <td>
+                            family member
+                        </td>
+                        <td>
+                            家族
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0284">0284. friends/allies</h2>
+                <p>
+                    changes how the party is addressed in sentences. updated in <b>common event 0054. !!!TEXT VARIABLES</b>. first checks if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> = 5, and if it isn't, checks the value of <a href="#0357">variable 0357. friend ally family</a>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            condition
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0002">ACT</a> = 5
+                        </td>
+                        <td>
+                            actors
+                        </td>
+                        <td>
+                            演者
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 0
+                        </td>
+                        <td>
+                            friends
+                        </td>
+                        <td>
+                            友達
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 1
+                        </td>
+                        <td>
+                            allies
+                        </td>
+                        <td>
+                            仲間
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 2
+                        </td>
+                        <td>
+                            family members
+                        </td>
+                        <td>
+                            家族
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0285">0285. a friend/an ally</h2>
+                <p>
+                    changes how the party is addressed in sentences. updated in <b>common event 0054. !!!TEXT VARIABLES</b>. first checks if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> = 5, and if it isn't, checks the value of <a href="#0357">variable 0357. friend ally family</a>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            condition
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0002">ACT</a> = 5
+                        </td>
+                        <td>
+                            an actor
+                        </td>
+                        <td>
+                            演者1人
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 0
+                        </td>
+                        <td>
+                            a friend
+                        </td>
+                        <td>
+                            友達1人
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 1
+                        </td>
+                        <td>
+                            an ally
+                        </td>
+                        <td>
+                            仲間1人
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#0357">v357</a> = 2
+                        </td>
+                        <td>
+                            a family member
+                        </td>
+                        <td>
+                            家族1人
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0286">0286. !\.</h2>
+                <p>
+                    changes the punctuation used in some sentences. updated in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="#0002">ACT</a>
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1-2
+                        </td>
+                        <td>
+                            !
+                        </td>
+                        <td>
+                            ！
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3-6
+                        </td>
+                        <td>
+                            .
+                        </td>
+                        <td>
+                            。
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0287">0287. ReminderNote</h2>
+                <p>
+                    changes the text used for the <b>Reminder Note</b> in the menu. updated in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <p>
+                    these are the raw strings!
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="#0001">loop</a>
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            ≤ 2
+                        </td>
+                        <td>
+                            <code>A note Mirabelle wrote for you and your sieve-like brain.&lt;br&gt;[Press <a href="#0376">\v[376]</a> to interact!]</code>
+                        </td>
+                        <td>
+                            <code>物覚えの悪い僕のためにミラベルが書いてくれたメモ。&lt;br&gt;[<a href="#0376">\\v[376]</a>で確認！]</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3+
+                        </td>
+                        <td>
+                            <code>A note Mirabelle wrote for you.&lt;br&gt;But you know what to do.</code>
+                        </td>
+                        <td>
+                            <code>僕のためにミラベルが書いてくれたメモ。&lt;br&gt;でも、すべきことはもう知っている。</code>
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0288">0288. Key 3-4</h2>
+                <p>
+                    changes the text for the <b>Empty Key</b> in the menu. updated in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            value at time of check
+                        </th>
+                        <th>
+                            new value after check (english)
+                        </th>
+                        <th>
+                            new value after check (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            A key adorned with a keychain shaped like a mask. It doesn't have an expression.
+                        </td>
+                        <td>
+                            仮面のようなキーホルダーがついている鍵。仮面には表情がない。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            A useless key. Can't be used on the gate.
+                        </td>
+                        <td>
+                            使い道のない鍵。門を開けることはできない。
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0289">0289. TarotCard</h2>
+                <p>
+                    changes the text for the drawn card in the menu. set in <b>map 080:WritingDorm (Key 1-2F)</b> &gt; <b>event 009:Books</b>, or <b>map 137:ACT5_WritingDorm (Key 1-2F)</b> &gt; <b>event 009:Books</b> in ACT 5. generates a <a href="#0003">random number</a> 1-7 and assigns this variable based on that number and the <a href="#0002">ACT</a>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="#0002">ACT</a>
+                        </th>
+                        <th>
+                            <a href="#0003">Random #</a>
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            1-2
+                        </td>
+                        <td>
+                            1-2
+                        </td>
+                        <td>
+                            Six of Swords
+                        </td>
+                        <td>
+                            ソードの6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3-5
+                        </td>
+                        <td>
+                            Eight of Pentacles
+                        </td>
+                        <td>
+                            ペンタクルの8
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            Ace of Wands
+                        </td>
+                        <td>
+                            ワンドのエース
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            The Star
+                        </td>
+                        <td>
+                            星
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            3
+                        </td>
+                        <td>
+                            1-2
+                        </td>
+                        <td>
+                            Two of Swords
+                        </td>
+                        <td>
+                            ソードの2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3-5
+                        </td>
+                        <td>
+                            Five of Wands
+                        </td>
+                        <td>
+                            ワンドの5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            The Hermit
+                        </td>
+                        <td>
+                            隠者
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            Six of Pentacles
+                        </td>
+                        <td>
+                            ペンタクルの6
+                        </td>
+                    </tr>
+                    <tr>
+                        <td rowspan="4">
+                            4
+                        </td>
+                        <td>
+                            1-2
+                        </td>
+                        <td>
+                            Eight of Swords
+                        </td>
+                        <td>
+                            ソードの8
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3-5
+                        </td>
+                        <td>
+                            The Hanged Man
+                        </td>
+                        <td>
+                            吊るされた男
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            Five of Pentacles
+                        </td>
+                        <td>
+                            ペンタクルの5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            Ten of Swords
+                        </td>
+                        <td>
+                            ソードの10
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            <abbr title="not applicable">N/A</abbr>
+                        </td>
+                        <td>
+                            The Fool
+                        </td>
+                        <td>
+                            愚者
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0290">0290. Snacks</h2>
+                <p>
+                    changes the text for the <b>Eternal Snacks</b> in the menu. references <b>switch 0289. RE_ateeternalsnacks</b>. updated in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            switch
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            OFF
+                        </td>
+                        <td>
+                            Wh-- How did those snacks get here?!
+                        </td>
+                        <td>
+                            え――このお菓子はどこから？！
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ON
+                        </td>
+                        <td>
+                            A bunch of snacks given to you by Bonnie.
+                        </td>
+                        <td>
+                            ボニーがくれた大量のお菓子。
+                        </td>
+                    </tr>
+                </table>
+            
+            <h2 id="0291">0291. MemoryOfSkirmish</h2>
+                <p>
+                    changes the text for the <b>Memory of Skirmish</b> in the menu. updated in <b>common event 0054. !!!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="#0002">ACT</a>
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            Pew! Bam! Kapow! Easy-peasy!
+                        </td>
+                        <td>
+                            ピュー！ バン！ カポッ！ かーんたーん！
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            Not gonna be done anytime soon.
+                        </td>
+                        <td>
+                            すぐには終わりそうにない。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3+
+                        </td>
+                        <td>
+                            Too many to count.
+                        </td>
+                        <td>
+                            数え切れないほど多くをこなした。
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0292">0292. GiftFormirabelle</h2>
+                <p>
+                    changes the text for the <b>Loving Fanmail</b> in the menu. updated in <b>common event 0054. !!TEXT VARIABLES</b> according to the value of <b>switch 0056. QQQ_OpenedMirabellesGift_TL</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            s56
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            OFF
+                        </td>
+                        <td>
+                            A gift for Mirabelle. It's lovingly wrapped.
+                        </td>
+                        <td>
+                            ミラベルへの贈り物。かわいらしい包みに入っている。
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            ON
+                        </td>
+                        <td>
+                            A gift for Mirabelle. It can't be gifted anymore.
+                        </td>
+                        <td>
+                            ミラベルへの贈り物。もう渡すことはできない。
+                        </td>
+                </table>
+
+            <h2 id="0293">0293. BattleTextChange</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0294">0294. UseItem</h2>
+                <p>
+                    action text when using an item in battle--item name follows immediately after. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            <a href="#0002">ACT</a>
+                        </th>
+                        <th>
+                            value (english)
+                        </th>
+                        <th>
+                            value (japanese)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            1-4
+                        </td>
+                        <td>
+                            Bonnie runs in with a
+                        </td>
+                        <td>
+                            ボニーの支援：
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5-6
+                        </td>
+                        <td>
+                            You use a
+                        </td>
+                        <td>
+                            使用：
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0295">0295. FriendquestPrompts</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0296">0296. "time"</h2>
+                <p>
+                    for the text in battles, eg. "Siffrin<ins> time</ins>!" or "シフラン<ins>のターン</ins>！". updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            <code style="white-space: pre;"> time</code>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            <code>のターン</code>
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0297">0297. "mirabelle"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            MIRABELLE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            ミラベル
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0298">0298. "isabeau"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            ISABEAU
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            イザボー
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0299">0299. "odile"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            ODILE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            オディール
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0300">0300. "bonnie"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            BONNIE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            ボニー
+                        </td>
+                    </tr>
+                </table>
+
+            <h1 id="0301">0301. [--SAVE ITEMS--]</h2>
+
+            <h2 id="0302">0302. SaveItem</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0303">0303. SourTonicArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0304">0304. SuperSourArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0305">0305. CraftedWaterArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0306">0306. PepperArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0307">0307. GingerArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0308">0308. ThymeArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0309">0309. SweetArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0310">0310. SuperSweetArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0311">0311. SaltyArray</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h2 id="0312">0312. CompareItemValue</h2>
+                <p>
+                    <i class="secondary">TBA</i>
+                </p>
+
+            <h1 id="0313">0313. [MORE TEXT]</h1>
+
+            <h2 id="0314">0314. "the king"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            THE KING
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            王
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0315">0315. "the hhm"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            THE HEAD HOUSEMAIDEN
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            侍祭長
+                        </td>
+                    </tr>
+                </table>
+
+            <h2 id="0316">0316. "loop"</h2>
+                <p>
+                    used in name boxes. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                </p>
+                <table>
+                    <tr>
+                        <th>
+                            language
+                        </th>
+                        <th>
+                            value
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            english
+                        </td>
+                        <td>
+                            LOOP
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            japanese
+                        </td>
+                        <td>
+                            ループ
+                        </td>
+                    </tr>
+                </table>
+
+                <h2 id="0317">0317. "attack"</h2>
+                    <p>
+                        used in the battle menu. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                language
+                            </th>
+                            <th>
+                                value
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                english
+                            </td>
+                            <td>
+                                Attack
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                japanese
+                            </td>
+                            <td>
+                                攻撃
+                            </td>
+                        </tr>
+                    </table>
+
+                <h2 id="0318">0318. "guard"</h2>
+                    <p>
+                        used in the battle menu. updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                language
+                            </th>
+                            <th>
+                                value
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                english
+                            </td>
+                            <td>
+                                Guard
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                japanese
+                            </td>
+                            <td>
+                                防御
+                            </td>
+                        </tr>
+                    </table>
+
+                <h2 id="0319">0319. "button"</h2>
+                    <p>
+                        used,,, somewhere probably??? updated in <b>common event 0054. !!TEXT VARIABLES</b>.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                language
+                            </th>
+                            <th>
+                                value
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                english
+                            </td>
+                            <td>
+                                <i class="secondary">(empty string)</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                japanese
+                            </td>
+                            <td>
+                                ボタン
+                            </td>
+                        </tr>
+                    </table>
+                
+                <h2 id="0320">0320. Isaagi</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h1 id="0321">0321. [--LITTLE THINGS--]</h1>
+
+                <h2 id="0322">0322. OdileWeaponNotice</h2>
+                    <p>
+                        the number of times you've interacted with equipment you already have in this loop.
+                    </p>
+                    <p>
+                        incremented once every time <b>common event 0135. WeaponFoundAgain</b> is run, and triggers <a href="https://felicitations.neocities.org/random/generic#equipment" target="_blank">some dialogue</a> when it reaches 4. reset to 0 in <b>common event 0102. LOOP_ResetSwitches</b>.
+                    </p>
+
+                <h2 id="0323">0323. SifAgiChange</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0324">0324. IsaAgiChange</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0325">0325. PillarBrokenOrNot</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0326">0326. StatueCount_TL</h2>
+                    <p>
+                        the amount of Change God statues you've interacted with this loop.
+                    </p>
+                    <p>
+                        incremented once every time <b>map 001:FinalTemplates</b> &gt; <b>event 003:Statue</b> is run. doesn't increment in <a href="#0002">ACT</a> 5 or 6. reset to 0 in <b>common event 0102. LOOP_ResetSwitches</b>.
+                    </p>
+
+                <h2 id="0327">0327. LoopNothingToSay</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0328">0328. LoopLastConvo</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0329">0329. ChangeGodFace</h2>
+                    <p>
+                        the face the Change God statue in Dormont uses this loop.
+                    </p>
+                    <!-- image ids from the wiki -->
+                    <table>
+                        <tr>
+                            <th>
+                                condition
+                            </th>
+                            <th>
+                                value
+                            </th>
+                            <th>
+                                face
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                the default face. this is the face shown if it doesn't get changed.
+                                <br>
+                                in <a href="#0002">ACT</a> 4, the face has a 1 in 5 chance of changing at all, and if <b>switch 0215. MiraChangeGod_AL</b> is OFF, this face has a 1 in 4 chance of showing.
+                            </td>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/d/d6/ISAT_ChangeGod_Sleep.png" alt="The Change God statue in Dormont with closed cat-like eyes and two dots for a nose.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 2. the face has a 1 in 30 chance of changing at all, and if it does, this face has a 1 in 3 chance of showing.
+                            </td>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/b/b5/ISAT_ChangeGod_Silly_Face.png" alt="The Change God statue in Dormont with a funny face consisting of bright eyes and a happy, toothy smile.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 2. the face has a 1 in 30 chance of changing at all, and if it does, this face has a 1 in 3 chance of showing.
+                            </td>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/6/6b/ISAT_ChangeGod_Flat-Emoji.png" alt="The Change God statue in Dormont with a face like the :] (colon left-square-bracket) emoticon.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 2. the face has a 1 in 30 chance of changing at all, and if it does, this face has a 1 in 3 chance of showing.
+                            </td>
+                            <td>
+                                3
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/a/aa/ISAT_ChangeGod_Crying.png" alt="The Change God statue in Dormont with a sad, crying face.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 3. the face has a 1 in 15 chance of changing at all. if it does, and <b>switch 0215. MiraChangeGod_AL</b> is OFF, this face has a 2 in 5 chance of showing. if it's on, it has a 1 in 5 chance.
+                            </td>
+                            <td>
+                                4
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/5/53/ISAT_ChangeGod_Yawn.png" alt="The Change God statue in Dormont with cat-like eyes and a wide yawning mouth, showing pointed teeth.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 3. the face has a 1 in 15 chance of changing at all, and if it does, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                5
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/d/dd/ISAT_ChangeGod_Loop.png" alt="The Change God statue in Dormont with a face similar to Loop. It has starry dimples, raised eyebrows, and squinting eyes.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 3. the face has a 1 in 15 chance of changing at all, and if it does, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                6
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/4/4e/ISAT_ChangeGod_Eye_Gal.png" alt="The Change God statue in Dormont featuring eight eyes and a cat-like mouth.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 3. the face has a 1 in 15 chance of changing at all, and if it does, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                7
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/a/a8/ISAT_ChangeGod_Serious.png" alt="The Change God statue in Dormont with a face based on a Daruma.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 4. the face has a 1 in 5 chance of changing at all. if it does, and <a href="#0027">variable 0027. !!!LoopQuest</a> ≠ 14, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                8
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/3/39/ISAT_ChangeGod_Swirl.png" alt="The Change God statue in Dormont with a large swirl where the face normally is.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 4. the face has a 1 in 5 chance of changing at all. if it does, and <a href="#0027">variable 0027. !!!LoopQuest</a> ≠ 14, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                9
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/f/fa/ISAT_ChangeGod_Awake.png" alt="The Change God statue in Dormont with open cat-like eyes and two dots for a nose.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 4. the face has a 1 in 5 chance of changing at all. if it does, and <a href="#0027">variable 0027. !!!LoopQuest</a> ≠ 14, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                10
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/4/48/ISAT_ChangeGod_Leaking.png" alt="The Change God statue in Dormont with a completely black face and pupils. Parts of the statue have black cracks and the face looks like it is dripping.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 4. the face has a 1 in 5 chance of changing at all. if it does, and <a href="#0027">variable 0027. !!!LoopQuest</a> ≠ 14, this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                11
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/8/8d/ISAT_ChangeGod_Sifrin.png" alt="The Change God statue in Dormont with a face similar to Siffrin's. It has an eye patch and long hair.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                one of the faces that can be shown in <a href="#0002">ACT</a> 3 & 4, but will only ever show if <b>switch 0215. MiraChangeGod_AL</b> is ON. if the face changes at all (1 in 15 chance in <a href="#0002">ACT</a> 3, 1 in 5 chance in <a href=#0002">ACT</a> 4), this face has a 1 in 5 chance of showing.
+                            </td>
+                            <td>
+                                12
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/d/d2/ISAT_ChangGod_Mirabelle.png" alt="The Change God statue in Dormont with Mirabelle's drawing of its face. It has two misaligned eyes and a scribble for a mouth.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                the face shown in <a href="#0002">ACT</a> 5.
+                                <br>
+                                technically, this face can also be shown in <a href="#0002">ACT</a> 4. this face will only show in <a href="#0002">ACT</a> 4 if <a href="#0027">variable 0027. !!!LoopQuest</a> = 14, but if that's the case, you should be in <a href="#0002">ACT</a> 5 anyway.
+                            </td>
+                            <td>
+                                13
+                            </td>
+                            <td>
+                                <img src="https://instarsandtime.wiki.gg/images/9/9c/ISAT_ChangeGod_Glitched.png" alt="The glitched Change God statue in Dormont during Act 5.">
+                            </td>
+                        </tr>
+                    </table>
+
+                <h2 id="0330">0330. BarrelCount_AL</h2>
+                    <p>
+                        the number of barrels you've interacted with in all loops. incremented by one every time <b>map 001:FinalTemplates</b> &gt; <b>event 028:Barrel</b> is run.
+                    </p>
+
+                <h2 id="0331">0331. BarrelCount_TL</h2>
+                    <p>
+                        the number of barrels you've interacted with in this loop. incremented by one every time <b>map 001:FinalTemplates</b> &gt; <b>event 028:Barrel</b> is run, and reset to 0 in <b>common event 0102. LOOP_ResetSwitches</b>.
+                    </p>
+
+                <h2 id="0332">0332. QQQ_SifGhostSeen_TL</h2>
+                    <p>
+                        the number of ghosts you've seen this loop. seeing the ghost on floor one (<b>map 125:Hallway (Ghost1)</b> &gt; <b>event 009:SifGhostVisible?</b>) increments this by 1, floor two (<b>map 126:Hallway (Ghost2)</b> &gt; <b>event 009:SifGhostVisible?</b>) increments by 2, and floor three (<b>map 108:HallwayToKey(Ghost3)</b> &gt; <b>event 010:SifGhostVisible?</b>) increments by 4.
+                    </p>
+
+                <h2 id="0333">0333. TriedKillingFriend_AL</h2>
+                    <p>
+                        the number of times you've tried using <b>Your Dagger</b> on a friend. incremented by one every time <b>common event 0067. ITEM_suicide</b> is run and Isabeau, Mirabelle, Odile, or Bonnie is affected by <b>Suicide</b>, and not Siffrin.
+                    </p>
+                
+                <h2 id="0334">0334. LoopDaggerConvo</h2>
+                    <p>
+                        used to record what you've chosen when talking to look about using <b>Your Dagger</b> to loop.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                value
+                            </th>
+                            <th>
+                                meaning
+                            </th>
+                            <th>
+                                trigger (simple)
+                            </th>
+                            <th>
+                                trigger (technical)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                you have not had the <a href="https://felicitations.neocities.org/random/dagger#obtain" target="_blank">dagger convo</a> (yet)
+                            </td>
+                            <td>
+                                start the game
+                            </td>
+                            <td>
+                                <i class="secondary">TBA</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                you've had the <a href="https://felicitations.neocities.org/random/dagger#obtain" target="_blank">dagger convo</a>, and decided not to use your dagger to loop back
+                            </td>
+                            <td>
+                                don't take <b>Your Dagger</b>
+                            </td>
+                            <td>
+                                <b>common event 0162. PreDialogue</b> &gt; <a href="https://felicitations.neocities.org/random/dagger#obtain" target="_blank">dagger convo</a> &gt; choose (Yeah, no other way.), or "I won't. It was just an idea.", or "Okay, FINE, I'll stop thinking about it."
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2
+                            </td>
+                            <td>
+                                you've had the <a href="https://felicitations.neocities.org/random/dagger#obtain" target="_blank">dagger convo</a>, and decided to take your dagger
+                            </td>
+                            <td>
+                                gain <b>Your Dagger</b>
+                            </td>
+                            <td>
+                                <b>common event 0162. PreDialogue</b> &gt; <a href="https://felicitations.neocities.org/random/dagger#obtain" target="_blank">dagger convo</a> &gt; choose "And who are you to tell me what to do?!"
+                            </td>
+                        </tr>
+                    </table>
+
+                <h2 id="0335">0335. PillarCount_AL</h2>
+                    <p>
+                        the number of pillars you've interacted with in all loops. incremented by one every time <b>common event 0188:ColumnsEventA</b> is run.
+                    </p>
+
+                <h2 id="0336">0336. PillarCount_TL</h2>
+                    <p>
+                        the number of pillars you've interacted with in all loops. incremented by one every time <b>common event 0188:ColumnsEventA</b> is run, except for in <a href="#0002">ACT</a> 1, and reset to 0 in <b>common event 0102. LOOP_ResetSwitches</b>.
+                    </p>
+
+                <h2 id="0337">0337. QQQ_SifGhostSeen_AL</h2>
+                    <p>
+                        the number of ghosts you've seen this loop. seeing the ghost on floor one (<b>map 125:Hallway (Ghost1)</b> &gt; <b>event 009:SifGhostVisible?</b>), floor two (<b>map 126:Hallway (Ghost2)</b> &gt; <b>event 009:SifGhostVisible?</b>), and floor three (<b>map 108:HallwayToKey(Ghost3)</b> &gt; <b>event 010:SifGhostVisible?</b>) increments this variable by 1.
+                    </p>
+
+                <h2 id="0338">0338. SilverCoinHelp</h2>
+                    <p>
+                        <i class="secondary">TBA</i>
+                    </p>
+
+                <h2 id="0339">0339. CalledLoop #</h2>
+                    <p>
+                        the number of times you've called loop. incremented by one when <b>common event 0168. CallLoop</b> is run, if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≠ 5, <b>switch 0178. GoTalkToLoop_TL</b> is OFF, and <a href="#0126">variable 0126. CurrentPostion</a> is 2, 3, or 4.
+                    </p>
+
+                <h2 id="0340">0340. SawForgetNamesConvo_AL</h2>
+                    <p>
+                        a variable relating to the <a href="https://felicitations.neocities.org/random/deaths#name" target="_blank">forgot names convo</a>.
+                    </p>
+                    <table>
+                        <tr>
+                            <th>
+                                value
+                            </th>
+                            <th>
+                                meaning
+                            </th>
+                            <th>
+                                trigger (simple)
+                            </th>
+                            <th>
+                                trigger (technical)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                0
+                            </td>
+                            <td>
+                                you haven't had the <a href="https://felicitations.neocities.org/random/deaths#name" target="_blank">forgot names convo</a> yet
+                            </td>
+                            <td>
+                                start of game
+                            </td>
+                            <td>
+                                <i class="secondary">TBA</i>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1
+                            </td>
+                            <td>
+                                you've had the <a href="https://felicitations.neocities.org/random/deaths#name" target="_blank">forgot names convo</a>
+                            </td>
+                            <td>
+                                have the <a href="https://felicitations.neocities.org/random/deaths#name" target="_blank">forgot names convo</a>
+                            </td>
+                            <td>
+                                <b>common events 0116. LOOP_specialdeathevents</b> &gt; don't get the loop milestone or forgot loops monologues <!-- sorry i'm not doing it right now lol it's a lot of conditionals --> &gt; <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 4, <a href="#0339">variable 0339. CalledLoop #</a> ≥ 10, <a href="#0125">variable 0125. JustTeleported #</a>, <a href="#0003">variable 0003. Random #</a> = 4, and <a href="#340">variable 0340. SawForgetNamesConvo_AL</a> = 0
+                            </td>
+                        </tr>
+                    </table>
         </main>
     </body>
     

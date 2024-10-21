@@ -112,6 +112,18 @@ pre {
     font-family: 'Fairfax Hax', monospace;
 }
 
+code {
+    background-color: #0f0f0f;
+    font-family: 'Fairfax Hax', 'BestTen-CRT', monospace;
+    border-radius: 2px;
+    padding: 2px 4px;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0px;
+}
+
 
 
 .container {
@@ -124,8 +136,9 @@ pre {
 
 /* i have no idea how to make this size relatively, rip mobile users */
 .container.chatbox {
-    max-width: 816px;
-    min-height: 180px;
+    aspect-ratio: 816 / 180;
+    width: 816px;
+    height: 180px;
     position: relative;
     box-sizing: border-box;
 }
@@ -320,6 +333,10 @@ pre {
 
 .center {
     text-align: center;
+}
+
+.overline {
+    text-decoration: overline;
 }
 
 .column-container {
