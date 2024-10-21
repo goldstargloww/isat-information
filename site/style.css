@@ -112,6 +112,18 @@ pre {
     font-family: 'Fairfax Hax', monospace;
 }
 
+code {
+    background-color: #0f0f0f;
+    font-family: 'Fairfax Hax', 'BestTen-CRT', monospace;
+    border-radius: 2px;
+    padding: 2px 4px;
+}
+
+pre code {
+    background-color: transparent;
+    padding: 0px;
+}
+
 
 
 .container {
@@ -320,6 +332,10 @@ pre {
 
 .center {
     text-align: center;
+}
+
+.overline {
+    text-decoration: overline;
 }
 
 .column-container {
