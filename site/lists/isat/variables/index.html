@@ -857,7 +857,7 @@
                             finish Mirabelle's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 021:Miraquest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 021:Miraquest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -868,7 +868,7 @@
                             finish Odile's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 025:OdileQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 025:OdileQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -879,7 +879,7 @@
                             finish Bonnie's friendquest in ACT 5
                         </td>
                         <td>
-                            <b>map 061:BonnieQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 061:BonnieQuest</b> &gt; <b>event 002:Event</b> &gt; tab 3 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                     <tr>
@@ -890,7 +890,7 @@
                             talk to Isabeau by the Favor Tree in ACT 5
                         </td>
                         <td>
-                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b> &gt; tab 2 (runs if <a href="0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
+                            <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b> &gt; tab 2 (runs if <a href="#0002">variable ACT&lt;&lt;CanBeSeen&gt;&gt;</a> ≥ 5)
                         </td>
                     </tr>
                 </table>
@@ -982,7 +982,7 @@
                             look at the reminder note for the first time
                         </td>
                         <td>
-                            <b>common event 0055. ITEM_remindernote</b>, if <a href="0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt</a> < 4 and <a href="0042">variable 0042. It'sARibbon!_AL</a> ≤ 1
+                            <b>common event 0055. ITEM_remindernote</b>, if <a href="#0002">variable 0002. ACT&lt;&lt;CanBeSeen&gt;&gt</a> < 4 and <a href="#0042">variable 0042. It'sARibbon!_AL</a> ≤ 1
                         </td>
                     </tr>
                     <tr>
@@ -993,7 +993,7 @@
                             ask Mirabelle about what the thing she drew on the note is
                         </td>
                         <td>
-                            <b>map 030:DORMONT</b> &gt; <b>event 003:Mirabelle</b>, "What's the thing you drew?" (available if <a href="0042">variable 0042. It'sARibbon!_AL</a> = 1)
+                            <b>map 030:DORMONT</b> &gt; <b>event 003:Mirabelle</b>, "What's the thing you drew?" (available if <a href="#0042">variable 0042. It'sARibbon!_AL</a> = 1)
                         </td>
                     </tr>
                 </table>
@@ -1003,7 +1003,7 @@
                     the number of times you've gone "Isaaaaaaa!!!!!!!" when talking to him by the Favor Tree in ACT 1 & 2 (except for loop 1).
                 </p>
                 <p>
-                    only ever equals 0, 1, or 2. able to be incremented in <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b>, if <a href="0024">variable 0024. !!!Kingquest</a> ≠ 13, and if <b>switch 0045. TalkedToIsa_TL</b> is OFF, by choosing "Isa!". from there, choosing "Isaaaaaaa!!!!!!!" will increment this variable by 1, with a maximum of 2.
+                    only ever equals 0, 1, or 2. able to be incremented in <b>map 034:Village Tree (LOOP)</b> &gt; <b>event 002:Isabeau</b>, if <a href="#0024">variable 0024. !!!Kingquest</a> ≠ 13, and if <b>switch 0045. TalkedToIsa_TL</b> is OFF, by choosing "Isa!". from there, choosing "Isaaaaaaa!!!!!!!" will increment this variable by 1, with a maximum of 2.
                 </p>
 
             <h2 id="0044">0044. QQQ_IsaWon'tTouchYou_AL</h2>
@@ -2552,7 +2552,7 @@
                 <table>
                     <tr>
                         <th>
-                            <a href="#0001">loop #</a>
+                            <a href="#0001">loop</a>
                         </th>
                         <th>
                             value (english)

@@ -136,8 +136,9 @@ pre code {
 
 /* i have no idea how to make this size relatively, rip mobile users */
 .container.chatbox {
-    max-width: 816px;
-    min-height: 180px;
+    aspect-ratio: 816 / 180;
+    width: 816px;
+    height: 180px;
     position: relative;
     box-sizing: border-box;
 }
