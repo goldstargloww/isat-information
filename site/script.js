@@ -35,6 +35,7 @@ class Header extends HTMLElement {
 customElements.define('head-er', Header);
 
 
+
 function buttonImages(className) {
     var choices = document.getElementsByClassName(className);
     
@@ -66,6 +67,46 @@ function buttonImages(className) {
     }
 }
 
+function tableOfContents() {
+    if (document.getElementById("toc") != null) {
+        var toc = document.getElementById("toc");
+        var headings = [].slice.call(document.body.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+        var list = document.createElement("ul");
+    
+        headings.forEach(function (heading, index) {
+            console.log(index, heading);
+    
+            if (!(heading.classList.contains("title"))) {
+    
+                var listItem = document.createElement("li");
+                var link = document.createElement("a");
+                link.setAttribute("href", "#" + heading.id);
+                link.textContent = heading.textContent;
+                listItem.appendChild(link);
+    
+                // a bit scuffed but it works. ideally they should be sublists and subitems but i can't be bothered
+                if (heading.nodeName == "H2") {
+                    listItem.style.paddingLeft = "1em";
+                } else if (heading.nodeName == "H3") {
+                    listItem.style.paddingLeft = "2em";
+                } else if (heading.nodeName == "H4") {
+                    listItem.style.paddingLeft = "3em";
+                } else if (heading.nodeName == "H5") {
+                    listItem.style.paddingLeft = "4em";
+                } else if (heading.nodeName == "H6") {
+                    listItem.style.paddingLeft = "5em";
+                }
+    
+                list.appendChild(listItem);
+    
+            }
+        });
+    
+        toc.appendChild(list);
+    }
+}
+
 window.onload = function() {
     buttonImages("choice");
+    tableOfContents();
 }
