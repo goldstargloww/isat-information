@@ -129,12 +129,22 @@ function tableOfContents() {
 }
 
 function toggleToc(state = null) {
+    aside = document.querySelector("aside");
+    button = document.getElementById("toc-on");
     if (state == true) {
-        document.querySelector("aside").style.visibility = "visible";
-        document.getElementById("toc-on").style.visibility = "hidden";
+        aside.style.visibility = "visible";
+        button.style.visibility = "hidden";
     } else if (state == false) {
-        document.querySelector("aside").style.visibility = "hidden";
-        document.getElementById("toc-on").style.visibility = "visible";
+        aside.style.visibility = "hidden";
+        button.style.visibility = "visible";
+    } else if (state == null) {
+        if (aside.style.visibility == "visible") {
+            aside.style.visibility = "hidden";
+            button.style.visibility = "visible";
+        } else if (aside.style.visibility == "hidden") {
+            aside.style.visibility = "visible";
+            button.style.visibility = "hidden";
+        }
     }
 }
 
