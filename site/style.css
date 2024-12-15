@@ -11,6 +11,11 @@
     src: url('assets/fonts/FairfaxHax.ttf');
 }
 
+html {
+    scrollbar-color: #111 black;
+    scrollbar-width: thin;
+}
+
 body {
     background: url("assets/background.png") repeat;
     font-family: 'VCR OSD MONO', 'BestTen-CRT', 'Fairfax Hax', sans-serif;
@@ -18,13 +23,13 @@ body {
     box-sizing: border-box;
     font-size: 16px;
     margin: 0;
-    display: flex;
     max-width: 100vw;
 }
 
 main {
     background-color: black;
     padding: 32px;
+    max-width: 1200px;
     margin: auto;
     box-sizing: border-box;
 }
@@ -32,6 +37,7 @@ main {
 header {
     background-color: #111;
     padding: 16px;
+    max-width: 1200px;
     font-size: 23px;
     margin: auto;
     display: flex;
@@ -41,8 +47,26 @@ header {
 }
 
 aside {
+    padding-left: 1em;
+    height: 100vh;
     background-color: #0008;
     font-size: 12px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: #222 black;
+    scrollbar-width: thin;
+    scrollbar-gutter: auto;
+    direction: rtl; /* puts the scrollbar on the right */
+    transition: background-color 0.5s, border-width 0.5s, box-shadow 0.5s;
+    visibility: hidden;
+}
+
+aside > * {
+    direction: ltr;
 }
 
 aside ul {
@@ -58,27 +82,60 @@ aside a {
     text-decoration: none;
 }
 
-#center {
-    flex: 1 0 auto;
-    min-width: 70vw;
-    max-width: min(1200px, 100%);
+table-of-contents {
+    position: relative;
+    z-index: 2;
 }
 
-#left {
-    flex: 1 0 300px;
+#toc-on {
+    position: fixed;
+    top: 1em;
+    left: 1em;
 }
 
-#left-empty {
-    flex: 1 2 auto;
+#toc-off {
+    margin: 1em;
+    float: right;
 }
 
-#right {
-    flex: 1 2 auto;
+#toc-on, #toc-off {
+    background-color: black;
+    border: 1px white solid;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+}
+#toc-on img, #toc-off img {
+    width: 16px;
+    height: 16px;
 }
 
-@media screen and (max-width: 900px) {
-    #left, #left-empty, #right {
-        display: none;
+
+@media only screen and (min-width: 1775px) {
+    aside {
+        visibility: visible;
+    }
+    
+    #toc-on {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 1775px) {
+    aside {
+        background-color: black;
+        box-shadow: 0 0 10px 5px black;
+        border-right: 1px white solid;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    aside {
+        width: 100vw;
+    }
+
+    #toc-off {
+        margin-right: 2em;
     }
 }
 
@@ -167,6 +224,7 @@ code {
 pre code {
     background-color: transparent;
     padding: 0px;
+    white-space: pre-wrap;
 }
 
 
@@ -216,9 +274,6 @@ pre code {
 .choice li:hover {
     border-image: url("assets/gui/border-choice.svg") 3 stretch;
 }
-
-
-
 
 @keyframes move-top-left {
     0% {
@@ -312,6 +367,8 @@ pre code {
     z-index: 1;
     position: absolute;
 }
+
+
 
 @keyframes move-scroll-arrow-down {
     0% {
@@ -408,4 +465,55 @@ pre code {
 
 :hover > .tooltip {
     visibility: visible;
+}
+
+
+
+#screen-too-small {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 2.35em;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2.25em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+
+    table {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #screen-too-small {
+        visibility: visible;
+        width: fit-content;
+        height: fit-content;
+    }
 }

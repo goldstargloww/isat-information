@@ -34,6 +34,24 @@ class Header extends HTMLElement {
 
 customElements.define('head-er', Header);
 
+class TOC extends HTMLElement {
+    constructor() {
+        super()
+    }
+
+    connectedCallback() {
+        this.innerHTML =
+            `<button id="toc-on" onclick="toggleToc(true);"><img src="/assets/toc.svg"></button>
+            <aside>
+                <button id="toc-off" onclick="toggleToc(false);"><img src="/assets/gui/icons/i85.svg"></button>
+                <p class="center big"><b>TABLE OF CONTENTS</b></p>
+                <div id="toc"></div>
+            </aside>`
+    }
+}
+
+customElements.define('table-of-contents', TOC);
+
 
 
 function buttonImages(className) {
@@ -81,6 +99,7 @@ function tableOfContents() {
                 var listItem = document.createElement("li");
                 var link = document.createElement("a");
                 link.setAttribute("href", "#" + heading.id);
+                link.setAttribute("onclick", "clickedToc();")
                 link.textContent = heading.textContent;
                 listItem.appendChild(link);
     
@@ -94,7 +113,10 @@ function tableOfContents() {
                 } else if (heading.nodeName == "H5") {
                     listItem.style.paddingLeft = "4em";
                 } else if (heading.nodeName == "H6") {
-                    listItem.style.paddingLeft = "5em";
+                    listItem.style.visibility = "hidden";
+                    listItem.style.width = "0";
+                    listItem.style.height = "0";
+                    listItem.style.margin = "0";
                 }
     
                 list.appendChild(listItem);
@@ -103,6 +125,22 @@ function tableOfContents() {
         });
     
         toc.appendChild(list);
+    }
+}
+
+function toggleToc(state = null) {
+    if (state == true) {
+        document.querySelector("aside").style.visibility = "visible";
+        document.getElementById("toc-on").style.visibility = "hidden";
+    } else if (state == false) {
+        document.querySelector("aside").style.visibility = "hidden";
+        document.getElementById("toc-on").style.visibility = "visible";
+    }
+}
+
+function clickedToc() {
+    if (window.innerWidth <= 500) {
+        toggleToc(false)
     }
 }
 
