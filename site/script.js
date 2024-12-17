@@ -91,8 +91,7 @@ function tableOfContents() {
         var headings = [].slice.call(document.body.querySelectorAll("h1, h2, h3, h4, h5, h6"));
         var list = document.createElement("ul");
     
-        headings.forEach(function (heading, index) {
-            console.log(index, heading);
+        headings.forEach(function (heading) {
     
             if (!(heading.classList.contains("title"))) {
     
@@ -112,14 +111,11 @@ function tableOfContents() {
                     listItem.style.paddingLeft = "3em";
                 } else if (heading.nodeName == "H5") {
                     listItem.style.paddingLeft = "4em";
-                } else if (heading.nodeName == "H6") {
-                    listItem.style.visibility = "hidden";
-                    listItem.style.width = "0";
-                    listItem.style.height = "0";
-                    listItem.style.margin = "0";
                 }
-    
-                list.appendChild(listItem);
+
+                if (heading.nodeName != "H6") {
+                    list.appendChild(listItem);
+                }
     
             }
         });
@@ -150,11 +146,19 @@ function toggleToc(state = null) {
 
 function clickedToc() {
     if (window.innerWidth <= 500) {
-        toggleToc(false)
+        toggleToc(false);
     }
+}
+
+function externalLinks() {
+    document.querySelectorAll('a[href^="https://felicitations.neocities.org"]').forEach(function(element){
+        element.target = "_blank";
+        element.rel = "external";
+    })
 }
 
 window.onload = function() {
     buttonImages("choice");
     tableOfContents();
+    externalLinks();
 }
