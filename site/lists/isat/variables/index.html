@@ -1309,9 +1309,64 @@
                 </p>
 
             <h2 id="0053">0053. QQQ_mirabellefan_AL</h2>
-                <p>
-                    <i class="secondary">TBA</i>
-                </p>
+            <p>
+                where you are in the Stylish One's sidequest.
+            </p>
+            <table>
+                <tr>
+                    <th>
+                        value
+                    </th>
+                    <th>
+                        trigger (simple)
+                    </th>
+                    <th>
+                        trigger (technical)
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        0
+                    </td>
+                    <td>
+                        start of the game
+                    </td>
+                    <td>
+                        <i class="secondary">TBA</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>talking to the Stylish One for the second time</td>
+                    <td><b>map 069:House_Change</b> > <b>event 004:NPC_change</b> if <a href="#0010">variable 0010. Self Var EventCheck_0</a> ≥ 2</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>telling Mirabelle she has a fan</td>
+                    <td>
+                        <b>map 030:DORMONT</b> > <b>event 003:Mirabelle</b> if <a href="#0053">variable 0053. QQQ_mirabellefan_AL</a> = 1, 
+                        choose "You have a fan."
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>telling Mirabelle the "very stylish very scary lady" is her fan</td>
+                    <td><b>map 089:Classroom (Key 3-3L)</b> > <b>event 011:desk</b> if <a href="#0053">variable 0053. QQQ_mirabellefan_AL</a> = 2</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>telling the Stylish One that Mirabelle thinks she's scary</td>
+                    <td><b>map 069:House_Change</b> > <b>event 004:NPC_change</b> if <a href="#0053">variable 0053. QQQ_mirabellefan_AL</a> = 3</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>giving Mirabelle the <b>Loving Fanmail</b></td>
+                    <td>
+                        <b>map 030:DORMONT</b> > <b>event 003:Mirabelle</b> if <a href="#0053">variable 0053. QQQ_mirabellefan_AL</a> ≥ 4, 
+                        choose "Fanmail delivery!"
+                    </td>
+                </tr>
+            </table>
 
             <h2 id="0054">0054. LoopConvoSeenThisLoop?</h2>
                 <p>
