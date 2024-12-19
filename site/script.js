@@ -152,8 +152,16 @@ function clickedToc() {
 
 function externalLinks() {
     document.querySelectorAll('a[href^="https://felicitations.neocities.org"]').forEach(function(element){
-        element.target = "_blank";
+        element.target = "_blank"; // open in a new tab
         element.rel = "external";
+    })
+}
+
+function altTextToTitle() {
+    document.querySelectorAll('img[alt]:not([alt=""])').forEach(function(element){
+        if (!element.title) { // if there's no tooltip text already
+            element.title = element.alt; // set it to the alt text
+        }
     })
 }
 
@@ -161,4 +169,5 @@ window.onload = function() {
     buttonImages("choice");
     tableOfContents();
     externalLinks();
+    altTextToTitle();
 }
