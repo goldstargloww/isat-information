@@ -55,44 +55,31 @@ customElements.define('table-of-contents', TOC);
 
 
 function buttonImages(className) {
-    var choices = document.getElementsByClassName(className);
+    document.querySelectorAll(`.${className} *`).forEach(function(choice){
+        var cornerTopLeft = choice.appendChild(document.createElement("img"));
+        var cornerTopRight = choice.appendChild(document.createElement("img"));
+        var cornerBottomLeft = choice.appendChild(document.createElement("img"));
+        var cornerBottomRight = choice.appendChild(document.createElement("img"));
     
-    for (item in choices) {
-        if (typeof choices[item] == "object") {
-
-            elements = choices[item].children;
-            
-            for (i in elements) {
-                if (typeof elements[i] == "object") {
-                    var cornerTopLeft = elements[i].appendChild(document.createElement("img"));
-                    var cornerTopRight = elements[i].appendChild(document.createElement("img"));
-                    var cornerBottomLeft = elements[i].appendChild(document.createElement("img"));
-                    var cornerBottomRight = elements[i].appendChild(document.createElement("img"));
-                
-                    cornerTopLeft.src = "/assets/gui/cursor-border-top-left.svg";
-                    cornerTopRight.src = "/assets/gui/cursor-border-top-right.svg";
-                    cornerBottomLeft.src = "/assets/gui/cursor-border-bottom-left.svg";
-                    cornerBottomRight.src = "/assets/gui/cursor-border-bottom-right.svg";
-                
-                    cornerTopLeft.id = "corner-top-left";
-                    cornerTopRight.id = "corner-top-right";
-                    cornerBottomLeft.id = "corner-bottom-left";
-                    cornerBottomRight.id = "corner-bottom-right";
-                }
-            }
-
-        }
-    }
+        cornerTopLeft.src = "/assets/gui/cursor-border-top-left.svg";
+        cornerTopRight.src = "/assets/gui/cursor-border-top-right.svg";
+        cornerBottomLeft.src = "/assets/gui/cursor-border-bottom-left.svg";
+        cornerBottomRight.src = "/assets/gui/cursor-border-bottom-right.svg";
+    
+        cornerTopLeft.id = "corner-top-left";
+        cornerTopRight.id = "corner-top-right";
+        cornerBottomLeft.id = "corner-bottom-left";
+        cornerBottomRight.id = "corner-bottom-right";
+    })
 }
 
 function tableOfContents() {
     if (document.getElementById("toc") != null) {
         var toc = document.getElementById("toc");
-        var headings = [].slice.call(document.body.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+        var headings = [].slice.call(document.body.querySelectorAll("h1, h2, h3, h4, h5"));
         var list = document.createElement("ul");
     
-        headings.forEach(function (heading, index) {
-            console.log(index, heading);
+        headings.forEach(function(heading){
     
             if (!(heading.classList.contains("title"))) {
     
@@ -112,13 +99,7 @@ function tableOfContents() {
                     listItem.style.paddingLeft = "3em";
                 } else if (heading.nodeName == "H5") {
                     listItem.style.paddingLeft = "4em";
-                } else if (heading.nodeName == "H6") {
-                    listItem.style.visibility = "hidden";
-                    listItem.style.width = "0";
-                    listItem.style.height = "0";
-                    listItem.style.margin = "0";
                 }
-    
                 list.appendChild(listItem);
     
             }
@@ -131,30 +112,39 @@ function tableOfContents() {
 function toggleToc(state = null) {
     aside = document.querySelector("aside");
     button = document.getElementById("toc-on");
-    if (state == true) {
+    if (state == true || state == null && aside.style.visibility == "hidden") {
         aside.style.visibility = "visible";
         button.style.visibility = "hidden";
-    } else if (state == false) {
+    } else if (state == false || state == null && aside.style.visibility == "visible") {
         aside.style.visibility = "hidden";
         button.style.visibility = "visible";
-    } else if (state == null) {
-        if (aside.style.visibility == "visible") {
-            aside.style.visibility = "hidden";
-            button.style.visibility = "visible";
-        } else if (aside.style.visibility == "hidden") {
-            aside.style.visibility = "visible";
-            button.style.visibility = "hidden";
-        }
     }
 }
 
 function clickedToc() {
     if (window.innerWidth <= 500) {
-        toggleToc(false)
+        toggleToc(false);
     }
+}
+
+function externalLinks() {
+    document.querySelectorAll('a[href^="https://felicitations.neocities.org"]').forEach(function(element){
+        element.target = "_blank"; // open in a new tab
+        element.rel = "external";
+    })
+}
+
+function altTextToTitle() {
+    document.querySelectorAll('img[alt]:not([alt=""])').forEach(function(element){
+        if (!element.title) { // if there's no tooltip text already
+            element.title = element.alt; // set it to the alt text
+        }
+    })
 }
 
 window.onload = function() {
     buttonImages("choice");
     tableOfContents();
+    externalLinks();
+    altTextToTitle();
 }
