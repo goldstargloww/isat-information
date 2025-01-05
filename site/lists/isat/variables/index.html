@@ -1130,8 +1130,109 @@
 
             <h2 id="0039">0039. BonnieListening_AL</h2>
                 <p>
-                    <i class="secondary">TBA</i>
+                    where you are in the Memory of Promise sidequest
                 </p>
+                <table>
+                    <tr>
+                        <th>
+                            value
+                        </th>
+                        <th>
+                            trigger (simple)
+                        </th>
+                        <th>
+                            trigger (technical)
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            start of the game
+                        </td>
+                        <td>
+                            <i class="secondary">TBA</i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            1
+                        </td>
+                        <td>
+                            getting to the second snack break for the first time
+                        </td>
+                        <td>
+                            <b>map041:FLOOR 3, START</b> > <b>event006:Event</b> if <a href="#0039">variable 0039. BonnieListening_AL</a> = 0
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            2
+                        </td>
+                        <td>
+                            seeing bonnie read the book about death rituals in the <a href="https://felicitations.neocities.org/rooms/floor3/writing_room.html">writing room</a>
+                        </td>
+                        <td>
+                            <b>map100:Writing Room</b> > <b>event002:Books</b> if <a href="#0039">variable 0039. BonnieListening_AL</a> = 1
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            3
+                        </td>
+                        <td>
+                            finding the <a href="https://felicitations.neocities.org/rooms/floor1/breakroom1.html#books">copy of the book</a> on the first floor
+                        </td>
+                        <td>
+                            <b>map 111:BreakRoom</b> > <b>event 003:Books</b> if <a href="#0039">variable 0039. BonnieListening_AL</a> = 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            4
+                        </td>
+                        <td>
+                            <a href="https://felicitations.neocities.org/rooms/floor2/snackbreak2#yelling">Bonnie yelling at Siffrin</a>
+                        </td>
+                        <td>
+                            <b>map041:FLOOR 3, START</b> > <b>event006:Event</b> if <a href="#0039">variable 0039. BonnieListening_AL</a> = 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            5
+                        </td>
+                        <td>
+                            finishing the snack break immediately after looping back
+                        </td>
+                        <td>
+                            <b>map041:FLOOR 3, START</b> > <b>event006:Event</b>, "Bury me somewhere. Can we talk about something else?" (other choices unavailable when <a href="#0039">v39</a> = 4)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            6
+                        </td>
+                        <td>
+                            trying to talk to Bonnie after they yell at Siffrin
+                        </td>
+                        <td>
+                            <b>map041:FLOOR 3, START</b> > <b>event001:Bonnie</b> > tab 3 if <a href="#0039">variable 0039. BonnieListening_AL</a> = 5
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            7
+                        </td>
+                        <td>
+                            <a href="https://felicitations.neocities.org/rooms/floor2/snackbreak2#promise">talking to Bonnie</a> and getting Memory of Promise
+                        </td>
+                        <td>
+                            <b>map041:FLOOR 3, START</b> > <b>event001:Bonnie</b> > tab 3 if <a href="#0039">variable 0039. BonnieListening_AL</a> ≥ 6 and not <a href="#0002">ACT</a> ≤ 2
+                        </td>
+                    </tr>
+                </table>
 
             <h2 id="0040">0040. Isaquest_AL</h2>
                 <p>
@@ -2130,7 +2231,7 @@
 
             <h2 id="0060">0060. AskedChangeGodBlessing#_AL</h2>
                 <p>
-                    incremented by one each time you ask for a blessing from the Change God statue. used for Loop <a href="https://felicitations.neocities.org/acts/act3-4/loophangout.html"><!--i'll put an anchor on it laterr-->bullying Siffrin in their hangout</a>; the buff increasing is handled by <a href="#0010">0010. Self Var EventCheck_0</a> ≥ 5 instead.
+                    incremented by one each time you ask for a blessing from the Change God statue. used for Loop <a href="https://felicitations.neocities.org/acts/act3-4/loophangout.html#notyours">bullying Siffrin in their hangout</a>; the buff increasing is handled by <a href="#0010">0010. Self Var EventCheck_0</a> ≥ 5 instead.
                 </p>
 
             <h2 id="0061">0061. QQQ_TimesFished#</h2>
@@ -2301,9 +2402,7 @@
                     <td>4</td>
                     <td>looking at the carving wood in the trap building room</td>
                     <td>
-                        <b>map 077:Armory</b> > <b>event 012:<span style="white-space: pre; background-color: #111;"> </span></b> 
-                        (the carving wood) <!--non zero chance i accidentally nuked the name of this event at some point but i cba checking-->
-                        if <a href="#0089">variable 0089. QQQ_KeyKnife_AL</a> = 3
+                        <b>map 117:TrapmakingRoom (Key 2-3F)</b> > <b>event 012:<span style="white-space: pre; background-color: #111;"> </span></b> (the carving wood) if <a href="#0089">variable 0089. QQQ_KeyKnife_AL</a> = 3
                     </td>
                 </tr>
                 <tr>
